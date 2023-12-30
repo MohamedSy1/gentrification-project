@@ -1,4 +1,4 @@
-import './index.css'
+import './front-end/style/index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

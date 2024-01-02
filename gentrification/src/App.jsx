@@ -1,6 +1,6 @@
 import './front-end/style/App.css'
 import 'leaflet/dist/leaflet.css'
-import datas from "./backend/medianAskingRent_All.json"
+import datas from "./backend/real_output.json"
 import {
     MapContainer,
     TileLayer,
@@ -19,8 +19,8 @@ function App() {
                     url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 {
-                datas.map(data => (
-                    <CircleMarker center={data.Coordinates} fillOpacity={0.2} fillColor = {"#00FF00"} radius = {35} key={Math.random()} color='auto'>
+                datas.map((data, index)=> (
+                    <CircleMarker center={data[index].Coordinates} fillOpacity={0.2} fillColor = {"#00FF00"} radius = {35} key={Math.random()} color='auto'>
                     </CircleMarker>
                 ))
                 }       

@@ -6,7 +6,6 @@ import csv
 
 
 
- 
 
 def findAddress(address):
     geolocator = Nominatim(user_agent="bananaeater")
@@ -32,7 +31,7 @@ for entry in new_list:
 
 json_dict = {"data": []}
 
-with open("medianAskingRent_All.csv", "r") as medianAskingRent:
+with open("./raw_data/medianAskingRent_All.csv", "r") as medianAskingRent:
     median_asking_rent = csv.DictReader(medianAskingRent)
 
     coordinates_list = [coord["Coordinates"] for coord in new_list]

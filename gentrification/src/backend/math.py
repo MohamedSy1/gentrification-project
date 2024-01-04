@@ -5,7 +5,9 @@ def validYear(str_):
     return str_[:4].isnumeric()
 
 
-hm = {}    
+hm = {} 
+
+list = []
 
 with open('../medianAskingRent_All.json', 'r') as medianAskingRent:
 
@@ -25,8 +27,10 @@ with open('../medianAskingRent_All.json', 'r') as medianAskingRent:
             else:
                 hm[i] = {}
 
+    for value in hm.values():
+        list.append(value)
 
-    dp = json.dumps(hm)
+    dp = json.dumps(list, indent=4)
     open('valuesOfyear.json','w').write(dp)
 
 

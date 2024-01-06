@@ -1,6 +1,7 @@
-import './front-end/style/App.css'
+import './front-end/style/index.css'
 import 'leaflet/dist/leaflet.css'
 import datas from "./backend/json_files/real_output.json"
+import Navbar from './front-end/component/navBar'
 import {
     MapContainer,
     TileLayer,
@@ -11,11 +12,6 @@ import {
   } from 'react-leaflet'
 import { MyButton } from "./front-end/component/Button"
 import { useState } from 'react'
-
-
-
-
-
 
 function App() {
     const [startYear, setStartYear] = useState("2010")
@@ -44,8 +40,10 @@ function App() {
     }
 
     return (
+        
         <div>
-            <MapContainer center={[40.73061, -73.935242]} zoom={11}>
+            <Navbar/>
+            <MapContainer className='flex flex-row justify-center' center={[40.73061, -73.935242]} zoom={11}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"

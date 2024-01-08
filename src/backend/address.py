@@ -2,7 +2,6 @@ import pandas as pd
 import csv
 import xlsxwriter
 
-
 address_list = []
 workbook = xlsxwriter.Workbook("./raw_data/address.xlsx")
 worksheet = workbook.add_worksheet("firstSheet")
@@ -13,9 +12,4 @@ with open("./raw_data/medianAskingRent_All.csv", encoding="utf-8") as medianAski
         full_address = row["Borough"] + ", " + row["areaName"]
         worksheet.write(index, 0, full_address)
 
-
 workbook.close()
-
-
-
-

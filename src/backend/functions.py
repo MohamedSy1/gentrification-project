@@ -4,9 +4,6 @@ import re
 import json
 import csv
 
-
-
-
 def findAddress(address):
     geolocator = Nominatim(user_agent="bananaeater")
     location = geolocator.geocode(address)
@@ -16,18 +13,17 @@ def findAddress(address):
     return None
 
 # Read addresses from Excel file into a pandas DataFrame
+
 df = pd.read_excel("address.xlsx", header=None, names=["Address"])
 address_list = list(df["Address"])
 
 new_list = [{"Address": address, "City": "New York", "Country": "United States"} for address in address_list]
 
 # Iterate through the new_list and find coordinates for each address
+
 for entry in new_list:
     coordinates = findAddress(entry["Address"])
     entry["Coordinates"] = coordinates if coordinates else "None"
-
-
-
 
 json_dict = {"data": []}
 

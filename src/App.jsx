@@ -12,6 +12,8 @@ import {
 import { MyButton } from "./front-end/component/Button"
 import { useState } from 'react'
 import Container1 from "./front-end/component/container1"
+import color from "./front-end/assets/heatcolor.jpg"
+import SourcePage from './front-end/pages/source'
 
 function App() {
     const [startYear, setStartYear] = useState("2010")
@@ -42,6 +44,7 @@ function App() {
         <div>
             <Navbar/>
             <Container1/>
+            <img className="pt-[25rem] absolute" src={color} alt="color description"/>
             <section>
                 <MapContainer className='flex flex-row justify-center' center={[40.73061, -73.935242]} zoom={11} scrollWheelZoom={false}>
                     <TileLayer 
@@ -60,6 +63,7 @@ function App() {
                     }
                 </MapContainer>
                 <MyButton startYear={startYear} setStartYear={setStartYear} endYear={endYear} setEndYear={setEndYear}></MyButton>
+                
             </section>
         </div>
     )

@@ -1,5 +1,6 @@
 import React from "react"
 import logo from "../assets/logo.png"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -8,10 +9,11 @@ const Navbar = () => {
                 <img className="w-[15rem]" src={logo} alt="Rent Increase" />
                 <ul className="flex flex-row gap-[2rem]">
                    <li>
-                       <a href="#" className="hover:text-blue-500 hover:underline">Home</a>
+                    <Link></Link>
+                       <a href="../App.jsx" className="hover:text-blue-500 hover:underline">Home</a>
                    </li>
                    <li>
-                       <a href="" className="hover:text-blue-500 hover:underline">About</a>
+                        <Link to="../pages/source.jsx" className="hover:text-blue-500 hover:underline">Source</Link>
                    </li>
                    <li>
                        <a href="" className="hover:text-blue-500 hover:underline">Contact</a>

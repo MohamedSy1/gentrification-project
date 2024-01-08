@@ -34,8 +34,8 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.1
       - run: npm install
-      - run: rm src/index.html
-      - run: mv src/indexproduction.html src/index.html
+      - run: rm index.html
+      - run: mv indexproduction.html index.html
       - run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4

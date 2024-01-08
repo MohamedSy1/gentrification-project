@@ -1,8 +1,2 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Gentrification
+This is a gentrification heat map, using data from NYC open data, CoreData.nyc, and the USA census to quantify and plot the enchroachment of affluent individuals on low income communities resulting in the displacement of historically disenfranchised minorities and skyrocketing property values and average rent prices.

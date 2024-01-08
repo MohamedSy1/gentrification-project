@@ -16,7 +16,7 @@ import Container1 from "./front-end/component/container1"
 function App() {
     const [startYear, setStartYear] = useState("2010")
     const [endYear, setEndYear] = useState("2015")
-    const calculatePercentage = (areaName: object) => {
+    const calculatePercentage = (areaName) => {
         const rentStart =  Number(areaName[startYear])
         const rentEnd = Number(areaName[endYear])
         if (rentStart == 0 || rentEnd == 0) {
@@ -27,7 +27,7 @@ function App() {
         }
     }
 
-    const changeColor = (percentIncrease: number) => {
+    const changeColor = (percentIncrease) => {
         if (percentIncrease <= 5) return "#00FF00"
         if (percentIncrease <= 10) return "#7FFF00"
         if (percentIncrease <= 15) return "#BFFF00"

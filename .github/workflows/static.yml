@@ -33,15 +33,15 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.1
-      - run: cd gentrification && npm install
-      - run: cd gentrification && npm run build
+      - run: npm install
+      - run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './gentrification/dist'
+          path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

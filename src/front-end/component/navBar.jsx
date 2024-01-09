@@ -13,7 +13,7 @@ const Navbar = () => {
                        <a href="../App.jsx" className="hover:text-blue-500 hover:underline">Home</a>
                    </li>
                    <li>
-                        <Link to="../pages/source.jsx" className="hover:text-blue-500 hover:underline">Source</Link>
+                        <Link to="/pages" className="hover:text-blue-500 hover:underline">Source</Link>
                    </li>
                    <li>
                        <a href="" className="hover:text-blue-500 hover:underline">Contact</a>

@@ -11,7 +11,7 @@ import {
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/gentrification-project">
             <Routes>
                 <Route path="/" element={<HomePage/>}/>
                 <Route path="/pages" element={<SourcePage />} />

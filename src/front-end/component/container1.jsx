@@ -1,10 +1,10 @@
 import React from "react";
 import picture from "../assets/picture.png"
 
-const SectionHeader = ({ title, children }) => {
+const SectionHeader = ({ title, children, picture }) => {
     return (
         <section className="w-full bg-black relative h-[55rem]">
-            <div className="flex w-full">
+            <div className="flex justify-between w-full">
                 <header className="text-white text-[90px] font-serif p-[10rem] pb-[20px]">
                     <h1>{title}</h1>
                 </header>
@@ -12,12 +12,12 @@ const SectionHeader = ({ title, children }) => {
                     {children}
                 </div>
             </div>
-            <div className="pt-[5rem] pl-[90rem] flex">
-                <img className="size-[20rem] rounded-full" src={picture}/>
+            <div className="absolute top-1/2 left-0 transform -translate-y-1/2 pl-[5rem]">
+                <img className="w-[15rem] h-[15rem] rounded-full" src={picture} />
             </div>
         </section>
     )
- }
+}
  
  const Container1 = () => {
     return (

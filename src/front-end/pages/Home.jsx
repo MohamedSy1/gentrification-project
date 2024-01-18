@@ -44,7 +44,7 @@ function HomePage() {
         <div>
             <Navbar/>
             <Container1/>
-            {/* <img className="w-[10rem] absolute" src={color} alt="color description"/> */}
+            <img className="pt-[25rem] absolute" src={color} alt="color description"/>
             <section>
                 <MapContainer className='flex flex-row justify-center' center={[40.73061, -73.935242]} zoom={11} scrollWheelZoom={false}>
                     <TileLayer 

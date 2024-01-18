@@ -12,9 +12,6 @@ const SectionHeader = ({ title, children, picture }) => {
                     {children}
                 </div>
             </div>
-            <div className="absolute top-1/2 left-0 transform -translate-y-1/2 pl-[5rem]">
-                <img className="w-[15rem] h-[15rem] rounded-full" src={picture} />
-            </div>
         </section>
     )
 }
